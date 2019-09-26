@@ -20,8 +20,10 @@ app.get('/', (req, res) => {
 app.use(function errorHandler(error, req, res, next) {
   let response;
   if (NODE_ENV === 'production') {
+    //basic error on production
     response = { error: { message: 'server error' } };
   } else {
+    //more complex error for development
     console.error(error);
     response = { message: error.message, error };
   }
