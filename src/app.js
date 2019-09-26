@@ -14,7 +14,7 @@ app.use(helmet());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!');
+  res.send('Server running on port 8000! Good luck.');
 });
 
 app.use(function errorHandler(error, req, res, next) {
